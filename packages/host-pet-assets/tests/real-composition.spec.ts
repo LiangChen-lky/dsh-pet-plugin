@@ -78,7 +78,7 @@ async function loadComposition(options: { configLine?: string; withPet?: boolean
     "    host: '127.0.0.1'",
     '    port: 0',
     '- id: pet-assets',
-    "  name: '@deepseek-ai/dsh-host-pet-assets'",
+    "  name: '@kkkey/dsh-pet-assets'",
     ...(configLine === undefined ? ['  config:', `    petsDir: ${JSON.stringify(petsDir)}`] : [configLine]),
     '',
   ].join('\n'))
@@ -89,7 +89,7 @@ async function loadComposition(options: { configLine?: string; withPet?: boolean
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
     ['@deepseek-ai/dsh-host-webserver', HttpServer],
-    ['@deepseek-ai/dsh-host-pet-assets', PetAssets],
+    ['@kkkey/dsh-pet-assets', PetAssets],
   ])
   context.loader.internal = {
     version: 'v2',
@@ -278,7 +278,7 @@ describe('pet-assets composition', () => {
     const { base } = await loadComposition()
     expect((await fetch(`${base}/pet-assets/catalog.json`)).status).toBe(200)
     // 禁用条目走 Loader 部分卸载：fiber 处置必须摘掉本插件的两条路由
-    const entry = [...context!.loader.entries()].find(e => e.options.name === '@deepseek-ai/dsh-host-pet-assets')
+    const entry = [...context!.loader.entries()].find(e => e.options.name === '@kkkey/dsh-pet-assets')
     await entry?.update({ disabled: true })
     expect((await fetch(`${base}/pet-assets/catalog.json`)).status).toBe(404)
     expect((await fetch(`${base}/pet-assets/sprites/chefito/spritesheet.webp`)).status).toBe(404)

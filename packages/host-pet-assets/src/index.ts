@@ -1,11 +1,11 @@
 /**
- * @deepseek-ai/dsh-host-pet-assets — Codex-format pet assets over HTTP:
+ * @kkkey/dsh-pet-assets — Codex-format pet assets over HTTP:
  * scans the configured pets directory at activation (Codex contract
  * validation, fail-loud on broken manifests), then serves the catalog JSON
  * and spritesheet bytes through named webserver routes. The scan is an
  * activation-time snapshot; adding or replacing pets takes effect on the next
  * composition (restart or HMR reload).
- * @module @deepseek-ai/dsh-host-pet-assets
+ * @module @kkkey/dsh-pet-assets
  */
 
 import type { IncomingMessage, ServerResponse } from 'node:http'

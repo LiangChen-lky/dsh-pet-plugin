@@ -2,7 +2,7 @@
  * Pet asset catalog wire types: the host scan result the browser plugin
  * renders from. Mirrors the Codex pet contract (spritesheet grid, manifest
  * shape, animation resolution) so Codex-format pet directories load unchanged.
- * @module @deepseek-ai/dsh-host-pet-assets/types
+ * @module @kkkey/dsh-pet-assets/types
  */
 
 /** Spritesheet grid geometry; the default is the Codex contract cell layout. */
