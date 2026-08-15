@@ -1,0 +1,13 @@
+# 依赖与构建产物（git 直装靠 prepare 脚本现场构建，产物不入库）
+node_modules/
+lib/
+dist/
+*.tsbuildinfo
+
+# 测试/临时输出
+test-out.json
+coverage/
+
+# 系统文件
+.DS_Store
+Thumbs.db

@@ -1,0 +1,42 @@
+{
+  "name": "@liangchen-lky/dsh-pet-plugin",
+  "description": "dsh web companion-pet bundle: installs the host pet-assets and client pet-ui plugin rows through one patch layer",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiangChen-lky/dsh-pet-plugin.git"
+  },
+  "files": [
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@liangchen-lky/dsh-pet-assets": "workspace:^",
+    "@liangchen-lky/dsh-client-pet-ui": "workspace:^"
+  },
+  "scripts": {
+    "build": "pnpm -r --filter \"./packages/*\" run build",
+    "test": "vitest run",
+    "prepare": "node ./prepare.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "~18.3.1",
+    "jsdom": "^29.1.1",
+    "lightningcss": "^1.32.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsdown": "^0.22.2",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

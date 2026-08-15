@@ -1,0 +1,7 @@
+# dsh-pet-plugin 组合层：把两个插件行插进 web profile 的组合。
+# 包名 scope 与 npm 账号 @liangchen-lky 一致（发布时 npm 校验 scope 归属）。
+- insert:
+    - id: pet-assets
+      name: '@liangchen-lky/dsh-pet-assets'
+    - id: ui-pet
+      name: '@liangchen-lky/dsh-client-pet-ui'

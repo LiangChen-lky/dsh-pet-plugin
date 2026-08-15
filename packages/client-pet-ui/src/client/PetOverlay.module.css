@@ -1,0 +1,162 @@
+.root {
+  position: fixed;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  /* shell.overlay 层是点击穿透的，宠物自身恢复交互 */
+  pointer-events: auto;
+  user-select: none;
+}
+
+.spriteBox {
+  cursor: grab;
+  touch-action: none;
+}
+
+.spriteBox:active {
+  cursor: grabbing;
+}
+
+.bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  max-width: 220px;
+  padding: 8px 10px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 12px;
+  background: var(--dsw-specific-menu);
+  box-shadow: var(--dsw-shadow-lv3);
+}
+
+.bubbleTitle {
+  color: var(--dsw-alias-label-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.bubbleDetail {
+  color: var(--dsw-alias-label-secondary);
+  font-size: 11px;
+  line-height: 16px;
+  word-break: break-all;
+}
+
+.bubbleDismiss {
+  align-self: flex-end;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--dsw-alias-fill-l2);
+  color: var(--dsw-alias-label-secondary);
+  font-size: 11px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.bubbleDismiss:hover,
+.bubbleDismiss:focus-visible {
+  color: var(--dsw-alias-label-primary);
+}
+
+.picker {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  box-sizing: border-box;
+  width: 264px;
+  max-width: calc(100vw - 32px);
+  max-height: min(420px, calc(100vh - 140px));
+  padding: 8px;
+  overflow: auto;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 12px;
+  background: var(--dsw-specific-menu);
+  box-shadow: var(--dsw-shadow-lv3);
+  --dsh-scrollbar-thumb: var(--dsw-alias-scrollbar-bg-l2);
+  --dsh-scrollbar-thumb-hover: var(--dsw-alias-scrollbar-hover-l2);
+}
+
+.pickerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 4px 8px;
+  color: var(--dsw-alias-label-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.pickerClose {
+  padding: 2px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.pickerClose:hover,
+.pickerClose:focus-visible {
+  color: var(--dsw-alias-label-primary);
+}
+
+.pickerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pickerOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 6px 4px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.pickerOption:hover,
+.pickerOption:focus-visible {
+  background: var(--dsw-alias-fill-l2);
+}
+
+.pickerOptionSelected {
+  border-color: var(--dsw-alias-border-l2);
+  background: var(--dsw-alias-fill-l2);
+}
+
+.pickerPreview {
+  display: block;
+}
+
+.pickerName {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--dsw-alias-label-secondary);
+  font-size: 11px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pickerEmpty {
+  padding: 12px 8px;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
