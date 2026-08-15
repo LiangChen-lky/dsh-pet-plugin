@@ -1,5 +1,5 @@
 {
-  "name": "@liangchen-lky/dsh-pet-assets",
+  "name": "@kkkey/dsh-pet-assets",
   "description": "Codex-style pet asset catalog: scans a pets directory (default $DSH_HOME/pets, falling back to $CODEX_HOME/pets), validates manifests against the spritesheet contract, and serves catalog JSON plus spritesheet bytes over webserver routes",
   "version": "0.1.0",
   "type": "module",

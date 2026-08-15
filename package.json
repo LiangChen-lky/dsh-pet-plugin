@@ -1,5 +1,5 @@
 {
-  "name": "@liangchen-lky/dsh-pet-plugin",
+  "name": "@kkkey/dsh-pet-plugin",
   "description": "dsh web companion-pet bundle: installs the host pet-assets and client pet-ui plugin rows through one patch layer",
   "version": "0.1.0",
   "type": "module",
@@ -17,8 +17,8 @@
     }
   },
   "dependencies": {
-    "@liangchen-lky/dsh-pet-assets": "workspace:^",
-    "@liangchen-lky/dsh-client-pet-ui": "workspace:^"
+    "@kkkey/dsh-pet-assets": "workspace:^",
+    "@kkkey/dsh-client-pet-ui": "workspace:^"
   },
   "scripts": {
     "build": "pnpm -r --filter \"./packages/*\" run build",

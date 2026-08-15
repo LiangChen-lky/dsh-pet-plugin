@@ -6,7 +6,7 @@
 import { defineConfig } from 'tsdown'
 
 export default defineConfig({
-  name: '@liangchen-lky/dsh-pet-assets',
+  name: '@kkkey/dsh-pet-assets',
   entry: ['lib/types/index.js', 'lib/types/invariant.js'],
   outDir: 'lib',
   format: ['esm'],

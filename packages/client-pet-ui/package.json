@@ -1,5 +1,5 @@
 {
-  "name": "@liangchen-lky/dsh-client-pet-ui",
+  "name": "@kkkey/dsh-client-pet-ui",
   "description": "Shell-overlay companion pet: Codex-contract spritesheet animation linked to the current session's activity, with drag, hover, look-at-cursor, notification bubble, and pet picker",
   "version": "0.1.0",
   "type": "module",

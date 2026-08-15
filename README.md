@@ -22,17 +22,17 @@ dsh-pet-plugin/
 ├── tsconfig.base(+.client).json / tsdown.client.ts / platform.modules.ts
 ├── vitest.config.ts
 └── packages/
-    ├── host-pet-assets/      # host 插件：扫描/校验/HTTP 提供（@liangchen-lky/dsh-pet-assets）
-    └── client-pet-ui/        # client 插件：浏览器半区动画与交互（@liangchen-lky/dsh-client-pet-ui）
+    ├── host-pet-assets/      # host 插件：扫描/校验/HTTP 提供（@kkkey/dsh-pet-assets）
+    └── client-pet-ui/        # client 插件：浏览器半区动画与交互（@kkkey/dsh-client-pet-ui）
 ```
 
 ## 包名
 
-三个包使用 `@liangchen-lky/*` scope（与 npm 账号一致，可直接发布）：
+三个包使用 `@kkkey/*` scope（与 npm 账号一致，可直接发布）：
 
-- `@liangchen-lky/dsh-pet-plugin`（组合包）
-- `@liangchen-lky/dsh-pet-assets`（host 插件）
-- `@liangchen-lky/dsh-client-pet-ui`（client 插件）
+- `@kkkey/dsh-pet-plugin`（组合包）
+- `@kkkey/dsh-pet-assets`（host 插件）
+- `@kkkey/dsh-client-pet-ui`（client 插件）
 
 npm 只在发布时校验 scope 归属；**安装不受限制，任何人都能装**。
 
@@ -49,8 +49,8 @@ pnpm build          # tsc 出 lib/types，tsdown 出 lib 产物（含 client bun
 先发布两个子包，再发布组合包（bundle 的依赖走 npm 版本）：
 
 ```sh
-pnpm --filter @liangchen-lky/dsh-pet-assets publish
-pnpm --filter @liangchen-lky/dsh-client-pet-ui publish
+pnpm --filter @kkkey/dsh-pet-assets publish
+pnpm --filter @kkkey/dsh-client-pet-ui publish
 pnpm publish        # 根组合包
 ```
 
@@ -58,7 +58,7 @@ pnpm publish        # 根组合包
 
 ```sh
 # npm 发布后（推荐，无需白名单）
-dsh plugin --profile web add @liangchen-lky/dsh-pet-plugin
+dsh plugin --profile web add @kkkey/dsh-pet-plugin
 
 # git 直装（pnpm ≥ 10 需在 dsh home 的 pnpm-workspace.yaml 里 allowBuilds 白名单放行本包，否则 prepare 不执行）
 dsh plugin --profile web add github:LiangChen-lky/dsh-pet-plugin#<commit>

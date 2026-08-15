@@ -8,10 +8,10 @@ importers:
 
   .:
     dependencies:
-      '@liangchen-lky/dsh-client-pet-ui':
+      '@kkkey/dsh-client-pet-ui':
         specifier: workspace:^
         version: link:packages/client-pet-ui
-      '@liangchen-lky/dsh-pet-assets':
+      '@kkkey/dsh-pet-assets':
         specifier: workspace:^
         version: link:packages/host-pet-assets
     devDependencies:

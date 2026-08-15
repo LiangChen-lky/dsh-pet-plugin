@@ -6,4 +6,4 @@
  */
 import { clientBundle } from '../../tsdown.client.ts'
 
-export default clientBundle('@liangchen-lky/dsh-client-pet-ui', ['lib/types/index.js', 'lib/types/invariant.js'])
+export default clientBundle('@kkkey/dsh-client-pet-ui', ['lib/types/index.js', 'lib/types/invariant.js'])

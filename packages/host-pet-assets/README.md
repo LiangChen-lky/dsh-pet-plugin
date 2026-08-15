@@ -1,4 +1,4 @@
-# @liangchen-lky/dsh-pet-assets
+# @kkkey/dsh-pet-assets
 
 English | [中文](README.zh.md)
 
